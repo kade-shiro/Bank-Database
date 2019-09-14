@@ -1,0 +1,5 @@
+sccs get llist.cpp
+sccs get llist.h
+sccs get main.cpp
+sccs get record2.h
+sccs get Makefile
