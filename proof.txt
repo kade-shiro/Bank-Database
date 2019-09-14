@@ -1,0 +1,313 @@
+Script started on Sat 13 Apr 2019 03:21:41 AM HST
+uhx02:/home/k/kadeks/2019ICS212/proj2% ls
+proof.txt  [0m[01;34mSCCS[0m
+uhx02:/home/k/kadeks/2019ICS212/proj2% sccs get getrelease
+get: warning: SCCS/s.getrelease: No id keywords.
+1.8
+6 lines
+uhx02:/home/k/kadeks/2019ICS212/proj2% cat getrelease
+sccs get functions.c
+sccs get functions.h
+sccs get main.c
+sccs get makefile
+sccs get record.h
+
+uhx02:/home/k/kadeks/2019ICS212/proj2% sh getrelease
+get: warning: SCCS/s.functions.c: No id keywords.
+1.6
+429 lines
+get: warning: SCCS/s.functions.h: No id keywords.
+1.4
+36 lines
+get: warning: SCCS/s.main.c: No id keywords.
+1.4
+308 lines
+get: warning: SCCS/s.makefile: No id keywords.
+1.5
+12 lines
+get: warning: SCCS/s.record.h: No id keywords.
+1.3
+30 lines
+uhx02:/home/k/kadeks/2019ICS212/proj2% make
+gcc -ansi -pedantic-errors -Wall -c main.c
+gcc -ansi -pedantic-errors -Wall -c functions.c
+gcc -o  project1 main.o functions.o
+uhx02:/home/k/kadeks/2019ICS212/proj2% ls
+functions.c  functions.h  functions.o  getrelease  main.c  main.o  makefile  [0m[01;32mproject1[0m  proof.txt  record.h  [01;34mSCCS[0m
+uhx02:/home/k/kadeks/2019ICS212/proj2% rm f[K-f functions.c functions.h functions.o getrelease main.c main.o makefie[Kle project1 record.h
+uhx02:/home/k/kadeks/2019ICS212/proj2% ls
+proof.txt  [0m[01;34mSCCS[0m
+uhx02:/home/k/kadeks/2019ICS212/proj2% sccs get getrelease2
+get: warning: SCCS/s.getrelease2: No id keywords.
+1.1
+5 lines
+uhx02:/home/k/kadeks/2019ICS212/proj2% cat get rel[K[K[K[Ke[Krelease2
+sccs get llist.cpp
+sccs get llist.h
+sccs get main.cpp
+sccs get record2.h
+sccs get Makefile
+uhx02:/home/k/kadeks/2019ICS212/proj2% sh getrelease2
+get: warning: SCCS/s.llist.cpp: No id keywords.
+1.2
+499 lines
+get: warning: SCCS/s.llist.h: No id keywords.
+1.2
+54 lines
+get: warning: SCCS/s.main.cpp: No id keywords.
+1.2
+212 lines
+get: warning: SCCS/s.record2.h: No id keywords.
+1.3
+32 lines
+get: warning: SCCS/s.Makefile: No id keywords.
+2.2
+17 lines
+uhx02:/home/k/kadeks/2019ICS212/proj2% a[Kmake
+g++ -ansi -pedantic-errors -Wall -c main.cpp
+g++ -ansi -pedantic-errors -Wall -c llist.cpp
+g++ -o project2 main.o llist.o
+uhx02:/home/k/kadeks/2019ICS212/proj2% ./project2
+
+******* Debugmode *******
+
+******* Welcome to the Bank Database *******
+Select one of these options below and then press enter:
+(1) Add a new record in the database.
+(2) Print information about a record using the account number as the key.
+(3) Print all the information in the database.
+(4) Print the records whose names start with the given string as a key.
+(5) Delete an existing record from the database using the account number as a key.
+(6) Reverse the order of the records in the database.
+(7) Quit the program.
+1
+Please enter the account number that you would like to add: 1234
+Please enter your name: kade shj^Hiroma
+Please enter your address. Plress 'tab' and enter to continue:
+234dole	
+Is this information corret? (y\n)
+ account number: 1234
+ name: kade shjiroma
+ address: 234dole
+y
+debug: The name of the function called is addRecord.
+Parameters passed: 
+ 1234
+ kade shjiroma
+ 234dole
+
+******* Welcome to the Bank Database *******
+Select one of these options below and then press enter:
+(1) Add a new record in the database.
+(2) Print information about a record using the account number as the key.
+(3) Print all the information in the database.
+(4) Print the records whose names start with the given string as a key.
+(5) Delete an existing record from the database using the account number as a key.
+(6) Reverse the order of the records in the database.
+(7) Quit the program.
+2
+Please enter the account number that you would like to print: 1234
+
+ Account number: 1234
+Name: kade shjiroma
+Address:
+234dole
+debug: The name of the function called is printRecord.
+Parameters passed: 
+ 1234
+
+******* Welcome to the Bank Database *******
+Select one of these options below and then press enter:
+(1) Add a new record in the database.
+(2) Print information about a record using the account number as the key.
+(3) Print all the information in the database.
+(4) Print the records whose names start with the given string as a key.
+(5) Delete an existing record from the database using the account number as a key.
+(6) Reverse the order of the records in the database.
+(7) Quit the program.
+3
+
+ Record 1
+Account number: 1234
+Name: kade shjiroma
+Address:
+234dole
+debug: The name of the function called is operator <<
+
+******* Welcome to the Bank Database *******
+Select one of these options below and then press enter:
+(1) Add a new record in the database.
+(2) Print information about a record using the account number as the key.
+(3) Print all the information in the database.
+(4) Print the records whose names start with the given string as a key.
+(5) Delete an existing record from the database using the account number as a key.
+(6) Reverse the order of the records in the database.
+(7) Quit the program.
+4
+Please enter the beginning letters of a name to find its avaliable records: ka
+
+
+ Record 1
+Account number: 1234
+Name: kade shjiroma
+Address:
+234dole
+debug: The name of the function called is findRecords
+Parameters passed:
+ka
+******* Welcome to the Bank Database *******
+Select one of these options below and then press enter:
+(1) Add a new record in the database.
+(2) Print information about a record using the account number as the key.
+(3) Print all the information in the database.
+(4) Print the records whose names start with the given string as a key.
+(5) Delete an existing record from the database using the account number as a key.
+(6) Reverse the order of the records in the database.
+(7) Quit the program.
+5
+Please enter the account number that you would like
+to delete from the database: 1234
+Record: 1234 was deleted successfully.
+debug: The name of the function called is deleteRecord
+Parameters passed:
+1234
+******* Welcome to the Bank Database *******
+Select one of these options below and then press enter:
+(1) Add a new record in the database.
+(2) Print information about a record using the account number as the key.
+(3) Print all the information in the database.
+(4) Print the records whose names start with the given string as a key.
+(5) Delete an existing record from the database using the account number as a key.
+(6) Reverse the order of the records in the database.
+(7) Quit the program.
+3
+error: The databse is empty
+debug: The name of the function called is operator <<
+
+******* Welcome to the Bank Database *******
+Select one of these options below and then press enter:
+(1) Add a new record in the database.
+(2) Print information about a record using the account number as the key.
+(3) Print all the information in the database.
+(4) Print the records whose names start with the given string as a key.
+(5) Delete an existing record from the database using the account number as a key.
+(6) Reverse the order of the records in the database.
+(7) Quit the program.
+1
+Please enter the account number that you would like to add: 1234
+Please enter your name: kade
+Please enter your address. Plress 'tab' and enter to continue:
+dole	
+Is this information corret? (y\n)
+ account number: 1234
+ name: kade
+ address: dole
+y
+debug: The name of the function called is addRecord.
+Parameters passed: 
+ 1234
+ kade
+ dole
+
+******* Welcome to the Bank Database *******
+Select one of these options below and then press enter:
+(1) Add a new record in the database.
+(2) Print information about a record using the account number as the key.
+(3) Print all the information in the database.
+(4) Print the records whose names start with the given string as a key.
+(5) Delete an existing record from the database using the account number as a key.
+(6) Reverse the order of the records in the database.
+(7) Quit the program.
+1
+Please enter the account number that you would like to add: 566
+Please enter your name: bob
+Please enter your address. Plress 'tab' and enter to continue:
+ross	
+Is this information corret? (y\n)
+ account number: 566
+ name: bob
+ address: ross
+y
+debug: The name of the function called is addRecord.
+Parameters passed: 
+ 566
+ bob
+ ross
+
+******* Welcome to the Bank Database *******
+Select one of these options below and then press enter:
+(1) Add a new record in the database.
+(2) Print information about a record using the account number as the key.
+(3) Print all the information in the database.
+(4) Print the records whose names start with the given string as a key.
+(5) Delete an existing record from the database using the account number as a key.
+(6) Reverse the order of the records in the database.
+(7) Quit the program.
+3
+
+ Record 1
+Account number: 1234
+Name: kade
+Address:
+dole
+
+ Record 2
+Account number: 566
+Name: bob
+Address:
+ross
+debug: The name of the function called is operator <<
+
+******* Welcome to the Bank Database *******
+Select one of these options below and then press enter:
+(1) Add a new record in the database.
+(2) Print information about a record using the account number as the key.
+(3) Print all the information in the database.
+(4) Print the records whose names start with the given string as a key.
+(5) Delete an existing record from the database using the account number as a key.
+(6) Reverse the order of the records in the database.
+(7) Quit the program.
+6
+The order of the records have been reversed.
+debug: The name of the function called is reverse
+
+******* Welcome to the Bank Database *******
+Select one of these options below and then press enter:
+(1) Add a new record in the database.
+(2) Print information about a record using the account number as the key.
+(3) Print all the information in the database.
+(4) Print the records whose names start with the given string as a key.
+(5) Delete an existing record from the database using the account number as a key.
+(6) Reverse the order of the records in the database.
+(7) Quit the program.
+3
+
+ Record 1
+Account number: 566
+Name: bob
+Address:
+ross
+
+ Record 2
+Account number: 1234
+Name: kade
+Address:
+dole
+debug: The name of the function called is operator <<
+
+******* Welcome to the Bank Database *******
+Select one of these options below and then press enter:
+(1) Add a new record in the database.
+(2) Print information about a record using the account number as the key.
+(3) Print all the information in the database.
+(4) Print the records whose names start with the given string as a key.
+(5) Delete an existing record from the database using the account number as a key.
+(6) Reverse the order of the records in the database.
+(7) Quit the program.
+7
+uhx02:/home/k/kadeks/2019ICS212/proj2% ls
+database.txt  getrelease2  llist.cpp  llist.h  llist.o  main.cpp  main.o  Makefile  [0m[01;32mproject2[0m  proof.txt  record2.h  [01;34mSCCS[0m
+uhx02:/home/k/kadeks/2019ICS212/proj2% exr[Kit
+exit
+
+Script done on Sat 13 Apr 2019 03:24:51 AM HST
